@@ -29,3 +29,21 @@ $burgundy: #7b1f22;
   height: 1px;
   background-color: #c4c4c4;
 }
+
+@mixin text1-bold {
+  color: $black-gray;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@mixin h3-regular($color: #323430) {
+  color: $color;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+@mixin h2-bold($color: #7b1f22) {
+  color: $color;
+  font-size: 50px;
+  font-weight: 700;
+}

@@ -1,9 +1,83 @@
 @import "./styles/constants";
 
-body {
-  margin: 0;
-  font-family: $font;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: $light-gray;
+.header-container {
+  width: 100vw;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.nav-logo {
+  margin-left: 30px;
+  cursor: pointer;
+  width: 203px;
+  height: 48px;
+}
+
+.nav-desktop-item {
+  @include text1-bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.nav-desktop-item:hover {
+  color: $burgundy;
+}
+
+.icon-container {
+  display: none;
+}
+
+.nav-container-sidebar {
+  display: none;
+}
+
+// On tablets & mobile:
+// 1. Show hamburger icon only, instead of navbar
+// 2. On click a "sidebar" opens up with the nav options
+@media screen and (max-width: 768px) {
+  .icon-container {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .icon-hidden {
+    display: none;
+  }
+
+  .nav-desktop-item {
+    display: none;
+  }
+
+  .nav-options {
+    cursor: pointer;
+  }
+
+  .nav-container-sidebar {
+    position: absolute;
+    z-index: 2;
+    top: 120px;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: $main-padding;
+    background-color: $light-gray;
+  }
+
+  .nav-sidebar-item {
+    display: block;
+    margin-bottom: 30px;
+    @include h3-regular($color: $black-gray);
+    text-decoration: none;
+  }
+
+  .nav-sidebar-text {
+    @include h2-bold($color: $burgundy);
+    margin: 0 0 30px 0;
+  }
 }
