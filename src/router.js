@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Header from "./components/Header";
-import About from "./components/About";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components2/Header";
+import About from "./components2/About";
 import { StylesProvider } from "@material-ui/core/styles";
 
 const Router = () => {
@@ -9,9 +9,9 @@ const Router = () => {
     <StylesProvider injectFirst>
       <BrowserRouter>
         <Header />
-        <Switch>
+        <Routes>
           <Route path="/About" component={About} />
-        </Switch>
+        </Routes>
       </BrowserRouter>
     </StylesProvider>
   );
