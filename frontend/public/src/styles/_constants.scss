@@ -1,0 +1,31 @@
+$font: Roboto, sans-serif;
+$regular: 400;
+$bold: 700;
+
+//Colors
+$burgundy: #7b1f22;
+
+@mixin h1 {
+  color: $burgundy;
+  font-size: 86px;
+  font-weight: 700;
+}
+
+@mixin h2-bold($color: #7b1f22) {
+  color: $color;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+@mixin h3-regular($color: #323430) {
+  color: $color;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+@mixin divider-horizontal($width: 158px) {
+  margin: 28px 30px;
+  width: $width;
+  height: 1px;
+  background-color: #c4c4c4;
+}
