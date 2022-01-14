@@ -1,0 +1,9 @@
+@import "./styles/constants";
+
+body {
+  margin: 0;
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $light-gray;
+}
