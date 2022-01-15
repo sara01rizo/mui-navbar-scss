@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/Header.scss";
-import { ReactComponent as Hamburger } from "../assets/hamburger.svg";
-import { ReactComponent as Arrows } from "../assets/arrows.png";
-import { ReactComponent as Logo } from "../assets/fakelogo.png";
+import "./Header";
 
 // Here is header including navbar
 
@@ -16,14 +13,22 @@ const Header = () => {
   return (
     <nav className="header-container">
       <NavLink exact to="/" onClick={closeSidebar}>
-        <Logo className="nav-logo" />
+        <img src="./fakelogo.png" alt="fakelogo" className="nav-logo" />
       </NavLink>
       <NavLink to="/About" className="nav-desktop-item">
         About
       </NavLink>
       <div className="icon-container" onClick={onToggleOptions}>
-        <Hamburger className={options ? "icon-hidden" : "nav-options"} />
-        <Arrows className={options ? "nav-options" : "icon-hidden"} />
+        <img
+          src="./hamburger.png"
+          alt="hamburger"
+          className={options ? "icon-hidden" : "nav-options"}
+        />
+        <img
+          src="./arrows.png"
+          alt="arrows"
+          className={options ? "nav-options" : "icon-hidden"}
+        />
       </div>
       {options && (
         <div className="nav-container-sidebar">
